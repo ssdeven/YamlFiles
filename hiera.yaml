@@ -1,1 +1,15 @@
-Yaml File Content 4
+---
+:backends:
+  - yaml
+:hierarchy:
+  - defaults
+  - "%{clientcert}"
+  - "%{environment}"
+  - global
+
+:yaml:
+# datadir is empty here, so hiera uses its defaults:
+# - /etc/puppetlabs/code/hieradata on *nix
+# - %CommonAppData%\PuppetLabs\code\hieradata on Windows
+# When specifying a datadir, make sure the directory exists.
+  :datadir:
